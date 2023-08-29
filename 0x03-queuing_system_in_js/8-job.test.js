@@ -9,10 +9,10 @@ describe('createPushNotificationsJobs', () => {
     afterEach(() => queue.testMode.clear());
     after(() => queue.testMode.exit());
 
-    it('displays an error message if jobs is not an array', () => {
+    it('displays_an_error_message_if_jobs_is_not_an_array', () => {
         const job = {
             phoneNumber: '4153518780',
-            message: 'This is the code 1234 to verify your account',
+            message: 'This_is_the_code_1234 to_verify_your_account',
         };
         expect(() => createPushNotificationsJobs(job, queue)).to.throw(Error, 'Jobs is not an array');
     });

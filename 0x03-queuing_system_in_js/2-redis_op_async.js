@@ -8,7 +8,7 @@ const client = redis.createClient();
 const asyncGet = promisify(client.get).bind(client);
 
 // listen for the connect event to see whether we successfully connected to the redis-server
-client.on('connect', () => console.log('Redis client connected to the server'));
+client.on('connect', () => console.log('Redis_client_connected_to_the_server'));
 
 // listen for the error event tocheck if we failed to connect to the redis-server
 client.on('error', (err) => console.error(`Redis client not connected to the server: ${err.message}`));
