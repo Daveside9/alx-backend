@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Basic Flask app with Babel """
+""" Basic_Flask_app_with_Babel """
 
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
@@ -20,7 +20,7 @@ app.config.from_object(Config)
 
 @babel.localeselector
 def get_locale():
-    """ Determine the best match for the user's locale """
+    """ Determine_the_best_match_for_the_user's_locale """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
@@ -28,7 +28,7 @@ def get_locale():
 def index():
     """ Main route """
     return render_template(
-            '2-index.html', title=gettext('Welcome to Holberton'),
+            '2-index.html', title=gettext('Welcome_to_Holberton'),
             header=gettext('Hello world')
     )
 
